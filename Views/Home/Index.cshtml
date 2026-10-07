@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+<div class="p-4 p-md-5 mb-4 bg-white rounded-3 shadow-sm">
+    <h1 class="display-6 fw-bold">Minimarket Don Lucho</h1>
+    <p class="lead mb-0">Sistema de inventario para registrar productos, controlar el stock y revisar vencimientos.</p>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="h5"><i class="bi bi-box-seam"></i> Productos</h2>
+                <p class="display-6 mb-2">@ViewBag.TotalProductos</p>
+                <a asp-controller="Productos" asp-action="Index" class="btn btn-marca">Ver productos</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="h5"><i class="bi bi-tags"></i> Categorías</h2>
+                <p class="display-6 mb-2">@ViewBag.TotalCategorias</p>
+                <a asp-controller="Categorias" asp-action="Index" class="btn btn-outline-secondary">Ver categorías</a>
+            </div>
+        </div>
+    </div>
+</div>

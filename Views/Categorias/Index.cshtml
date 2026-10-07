@@ -1,0 +1,29 @@
+@model IEnumerable<Categoria>
+@{
+    ViewData["Title"] = "Categorías";
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+    <h1 class="h3 mb-0">Categorías</h1>
+    <a asp-action="Create" class="btn btn-marca"><i class="bi bi-plus-lg"></i> Nueva categoría</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table align-middle bg-white shadow-sm">
+        <thead class="table-light">
+            <tr>
+                <th>Nombre</th>
+                <th class="text-end">Productos</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td class="text-end">@item.Productos.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+:root {
+    --marca: #c8102e;
+    --marca-oscuro: #a00d25;
+}
+
+body {
+    background-color: #f6f6f8;
+}
+
+.bg-marca {
+    background-color: var(--marca);
+}
+
+.btn-marca {
+    background-color: var(--marca);
+    border-color: var(--marca);
+    color: #fff;
+}
+
+.btn-marca:hover,
+.btn-marca:focus {
+    background-color: var(--marca-oscuro);
+    border-color: var(--marca-oscuro);
+    color: #fff;
+}
